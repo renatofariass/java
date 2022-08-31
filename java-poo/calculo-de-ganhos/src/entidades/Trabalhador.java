@@ -13,16 +13,11 @@ public class Trabalhador {
     private Departamento departamento;
     private List <HorasDeContrato> contratos = new ArrayList<>();
 
-    public Trabalhador() {
-
-    }
-
     public Trabalhador(String nome, NivelDeTrabalhador nivel, double salarioBase, Departamento departamento) {
         this.nome = nome;
         this.nivel = nivel;
         this.salarioBase = salarioBase;
         this.departamento = departamento;
-        this.contratos = contratos;
     }
 
     public String getNome() {

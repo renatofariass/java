@@ -5,7 +5,6 @@ import entidades.HorasDeContrato;
 import entidades.Trabalhador;
 import enums.NivelDeTrabalhador;
 
-import javax.xml.crypto.Data;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -43,8 +42,8 @@ public class Programa {
             HorasDeContrato contrato = new HorasDeContrato(dataDoContrato, valorPorHora, horas);
             trabalhador.addContrato(contrato);
         }
-        System.out.println("");
-        System.out.println("Insira mês e ano para calcular a renda (MM/YYYY): ");
+
+        System.out.println("\nInsira mês e ano para calcular a renda (MM/YYYY): ");
         String mesEAno = sc.next();
         int mes = Integer.parseInt(mesEAno.substring(0, 2));
         int ano = Integer.parseInt(mesEAno.substring(3));
