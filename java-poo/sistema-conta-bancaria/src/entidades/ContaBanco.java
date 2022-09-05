@@ -47,7 +47,7 @@ public class ContaBanco {
 
     //Para sacar há uma taxa de R$5
     public void setSaque(double saque) {
-        if (getSaldo() > saque || saque < 0) {
+        if (getSaldo() > saque && saque > 0) {
             this.saldo = (getSaldo() - saque) - 5;
         }
         else {

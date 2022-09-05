@@ -32,21 +32,39 @@ public class Programa {
             }
             else if(simOuNao != "S" || simOuNao != "N"){
                 System.out.println("Digite uma resposta válida!");
+                System.out.print("Quer fazer um depósito inicial?(S/N): ");
             }
         }
         System.out.println(c1.toString());
 
         System.out.print("\nInsira um valor de depósito: ");
-        double deposito = sc.nextDouble();
-        c1.setDeposito(deposito);
+        while (true) {
+            double deposito = sc.nextDouble();
+            if (deposito > 0) {
+                c1.setDeposito(deposito);
+                break;
+            }
+            else {
+                System.out.println("operação inválida");
+                System.out.print("Insira um valor de depósito: ");
+            }
+        }
         System.out.println("Atualizando dados da conta:");
         System.out.println(c1.toString());
 
         System.out.print("\nInsira um valor de saque: ");
-        double saque = sc.nextDouble();
-        c1.setSaque(saque);
+        while (true) {
+            double saque = sc.nextDouble();
+            if(saque > 0) {
+                c1.setSaque(saque);
+                break;
+            }
+            else {
+                System.out.println("Operação inválida!");
+                System.out.print("Insira um valor de saque: ");
+            }
+        }
         System.out.println("Atualizando dados da conta:");
         System.out.println(c1.toString());
-
     }
 }
