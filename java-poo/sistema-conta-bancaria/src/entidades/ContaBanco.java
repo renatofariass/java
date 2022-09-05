@@ -28,17 +28,13 @@ public class ContaBanco {
         return saldo;
     }
 
-    public void setSaldo(double saldo) {
-        this.saldo = saldo;
-    }
-
     public double getDeposito() {
         return deposito;
     }
 
     public void setDeposito(double deposito) {
         if (deposito >= 0) {
-            setSaldo(deposito + getSaldo());
+            this.saldo = deposito + getSaldo();
         }
         else {
             System.out.println("Operação inválida");
@@ -52,7 +48,7 @@ public class ContaBanco {
     //Para sacar há uma taxa de R$5
     public void setSaque(double saque) {
         if (getSaldo() > saque || saque < 0) {
-            setSaldo((getSaldo() - saque) - 5);
+            this.saldo = (getSaldo() - saque) - 5;
         }
         else {
             System.out.println("Operação inválida!");

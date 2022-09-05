@@ -39,11 +39,13 @@ public class Programa {
         System.out.print("\nInsira um valor de depósito: ");
         double deposito = sc.nextDouble();
         c1.setDeposito(deposito);
+        System.out.println("Atualizando dados da conta:");
         System.out.println(c1.toString());
 
         System.out.print("\nInsira um valor de saque: ");
         double saque = sc.nextDouble();
         c1.setSaque(saque);
+        System.out.println("Atualizando dados da conta:");
         System.out.println(c1.toString());
 
     }
