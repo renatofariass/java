@@ -22,13 +22,14 @@ public class Programa {
             double saldo = sc.nextDouble();
             System.out.print("Limite de retirada: ");
             double limite = sc.nextDouble();
-
+            //instanciando objeto
             ContaBancaria cb = new ContaBancaria(numero, dono, saldo, limite);
 
             System.out.print("Insira uma quantia para saque: ");
             double saque = sc.nextDouble();
             cb.saque(saque);
         }
+        //tratando exceções
         catch (DomainException e) {
             System.out.println(e.getMessage());
         }
