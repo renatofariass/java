@@ -1,15 +1,12 @@
 import entidades.AparelhoTelefonico;
+import entidades.Iphone;
 import entidades.NavegadorInternet;
 import entidades.ReprodutorMusical;
 
 public class Main {
     public static void main(String[] args) {
-        AparelhoTelefonico aparelhoTelefonico = new AparelhoTelefonico();
-        NavegadorInternet navegadorInternet = new NavegadorInternet();
-        ReprodutorMusical reprodutorMusical = new ReprodutorMusical();
+        Iphone iphone = new Iphone();
 
-        aparelhoTelefonico.ligar();
-        navegadorInternet.exibirPagina();
-        reprodutorMusical.tocar();
+        iphone.getNavegadorInternet().exibirPagina();
     }
 }
